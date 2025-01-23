@@ -3,7 +3,9 @@
   "nbformat_minor": 0,
   "metadata": {
     "colab": {
-      "provenance": []
+      "provenance": [],
+      "authorship_tag": "ABX9TyPGjzM+LPv4mtTp8wEUpyNG",
+      "include_colab_link": true
     },
     "kernelspec": {
       "name": "python3",
@@ -15,14 +17,24 @@
   },
   "cells": [
     {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Laura-Chen7/ARound/blob/main/Model%20Building/MultiArtist\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": 34,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "eXWn5uoK2-k8",
-        "outputId": "9b41a9a3-a676-4c23-b0cd-59f530405c03"
+        "outputId": "3bc62032-ee0c-47dd-cb5f-ab05e548922f"
       },
       "outputs": [
         {
@@ -60,15 +72,15 @@
           "height": 1000
         },
         "id": "-4C4d39M3Ah0",
-        "outputId": "5a5f50c7-dfd2-4695-9786-3fe823832485"
+        "outputId": "8738dcb8-1af3-4bf5-a09d-71f92a817363"
       },
-      "execution_count": 4,
+      "execution_count": 35,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stderr",
           "text": [
-            "<ipython-input-4-849bbaa550de>:2: DtypeWarning: Columns (2,3,6,7,8,9,10,28) have mixed types. Specify dtype option on import or set low_memory=False.\n",
+            "<ipython-input-35-849bbaa550de>:2: DtypeWarning: Columns (2,3,6,7,8,9,10,28) have mixed types. Specify dtype option on import or set low_memory=False.\n",
             "  df = pd.read_csv(file_path)\n"
           ]
         },
@@ -171,7 +183,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-93516651-b567-4545-acd2-d8f6be02626c\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-fffd70e5-5be0-48c9-a22c-ef39f41d92ff\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -485,7 +497,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-93516651-b567-4545-acd2-d8f6be02626c')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-fffd70e5-5be0-48c9-a22c-ef39f41d92ff')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -537,12 +549,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-93516651-b567-4545-acd2-d8f6be02626c button.colab-df-convert');\n",
+              "        document.querySelector('#df-fffd70e5-5be0-48c9-a22c-ef39f41d92ff button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-93516651-b567-4545-acd2-d8f6be02626c');\n",
+              "        const element = document.querySelector('#df-fffd70e5-5be0-48c9-a22c-ef39f41d92ff');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -562,8 +574,8 @@
               "  </div>\n",
               "\n",
               "\n",
-              "<div id=\"df-0f78070f-567f-417b-9eb1-3f206adb71be\">\n",
-              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-0f78070f-567f-417b-9eb1-3f206adb71be')\"\n",
+              "<div id=\"df-8ad8fd23-b575-45e4-9928-afda359091ac\">\n",
+              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-8ad8fd23-b575-45e4-9928-afda359091ac')\"\n",
               "            title=\"Suggest charts\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -682,14 +694,14 @@
               "    }\n",
               "    (() => {\n",
               "      let quickchartButtonEl =\n",
-              "        document.querySelector('#df-0f78070f-567f-417b-9eb1-3f206adb71be button');\n",
+              "        document.querySelector('#df-8ad8fd23-b575-45e4-9928-afda359091ac button');\n",
               "      quickchartButtonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "    })();\n",
               "  </script>\n",
               "</div>\n",
               "\n",
-              "  <div id=\"id_b9fdbb76-14dc-4aef-9992-3ea1b9c49a3a\">\n",
+              "  <div id=\"id_86ebf5b3-535c-46d0-bdb8-441ffece34ab\">\n",
               "    <style>\n",
               "      .colab-df-generate {\n",
               "        background-color: #E8F0FE;\n",
@@ -733,7 +745,7 @@
               "    <script>\n",
               "      (() => {\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#id_b9fdbb76-14dc-4aef-9992-3ea1b9c49a3a button.colab-df-generate');\n",
+              "        document.querySelector('#id_86ebf5b3-535c-46d0-bdb8-441ffece34ab button.colab-df-generate');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
@@ -753,7 +765,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 4
+          "execution_count": 35
         }
       ]
     },
@@ -768,9 +780,9 @@
           "height": 1000
         },
         "id": "fhSPXhTw3laD",
-        "outputId": "fb6bb855-26ed-49e0-b302-637c730b6766"
+        "outputId": "5c8199af-3359-4d0c-e451-a0d270cfc2fd"
       },
-      "execution_count": 5,
+      "execution_count": 36,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1072,7 +1084,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 5
+          "execution_count": 36
         }
       ]
     },
@@ -1095,9 +1107,9 @@
           "height": 649
         },
         "id": "kVXObTKW4U2S",
-        "outputId": "c6614b28-dd7c-4c52-f7a7-bbb9bd710ef9"
+        "outputId": "520a87ee-591a-4f4e-9088-ad6206f25d4d"
       },
-      "execution_count": 6,
+      "execution_count": 37,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1224,7 +1236,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 6
+          "execution_count": 37
         }
       ]
     },
@@ -1257,9 +1269,9 @@
           "height": 669
         },
         "id": "Q2WrQ8R99RGU",
-        "outputId": "5bbfa9f8-5349-456c-985d-55beddb9094f"
+        "outputId": "b4275702-7b23-48c6-aba7-5cfe3e73b2c3"
       },
-      "execution_count": 7,
+      "execution_count": 38,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1347,7 +1359,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-49fc301b-8325-4360-b1ce-8ca9ccd322ab\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-688d6948-8f7b-4f55-b780-49017f6b509d\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -1649,7 +1661,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-49fc301b-8325-4360-b1ce-8ca9ccd322ab')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-688d6948-8f7b-4f55-b780-49017f6b509d')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -1701,12 +1713,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-49fc301b-8325-4360-b1ce-8ca9ccd322ab button.colab-df-convert');\n",
+              "        document.querySelector('#df-688d6948-8f7b-4f55-b780-49017f6b509d button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-49fc301b-8325-4360-b1ce-8ca9ccd322ab');\n",
+              "        const element = document.querySelector('#df-688d6948-8f7b-4f55-b780-49017f6b509d');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -1726,8 +1738,8 @@
               "  </div>\n",
               "\n",
               "\n",
-              "<div id=\"df-b1b34fbb-dfbd-44d7-b827-0cad5abbc2ea\">\n",
-              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-b1b34fbb-dfbd-44d7-b827-0cad5abbc2ea')\"\n",
+              "<div id=\"df-5f9f6e1d-e169-4e1a-a210-611b9cab8f7e\">\n",
+              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-5f9f6e1d-e169-4e1a-a210-611b9cab8f7e')\"\n",
               "            title=\"Suggest charts\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -1846,14 +1858,14 @@
               "    }\n",
               "    (() => {\n",
               "      let quickchartButtonEl =\n",
-              "        document.querySelector('#df-b1b34fbb-dfbd-44d7-b827-0cad5abbc2ea button');\n",
+              "        document.querySelector('#df-5f9f6e1d-e169-4e1a-a210-611b9cab8f7e button');\n",
               "      quickchartButtonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "    })();\n",
               "  </script>\n",
               "</div>\n",
               "\n",
-              "  <div id=\"id_c107a7e9-d4da-471b-9c84-b7bc1a604971\">\n",
+              "  <div id=\"id_760314eb-a528-431c-abd1-052e82906231\">\n",
               "    <style>\n",
               "      .colab-df-generate {\n",
               "        background-color: #E8F0FE;\n",
@@ -1897,7 +1909,7 @@
               "    <script>\n",
               "      (() => {\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#id_c107a7e9-d4da-471b-9c84-b7bc1a604971 button.colab-df-generate');\n",
+              "        document.querySelector('#id_760314eb-a528-431c-abd1-052e82906231 button.colab-df-generate');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
@@ -1918,7 +1930,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 7
+          "execution_count": 38
         }
       ]
     },
@@ -1943,9 +1955,9 @@
           "height": 912
         },
         "id": "HnfHVawYaGen",
-        "outputId": "bb03596f-bbab-4c21-b753-fd0fe402926c"
+        "outputId": "52d0a3c5-4f8e-4509-bf86-d0705a08a241"
       },
-      "execution_count": 8,
+      "execution_count": 39,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1990,9 +2002,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "4EzigtU6avKk",
-        "outputId": "90ede9eb-688d-4af8-c152-a9f399937c5c"
+        "outputId": "6f0ae60c-a9f8-48ee-8c67-9f510717544b"
       },
-      "execution_count": 9,
+      "execution_count": 40,
       "outputs": [
         {
           "output_type": "stream",
@@ -2021,9 +2033,9 @@
           "output_type": "stream",
           "name": "stderr",
           "text": [
-            "/usr/local/lib/python3.10/dist-packages/statsmodels/regression/linear_model.py:1782: RuntimeWarning: divide by zero encountered in scalar divide\n",
+            "/usr/local/lib/python3.11/dist-packages/statsmodels/regression/linear_model.py:1782: RuntimeWarning: divide by zero encountered in scalar divide\n",
             "  return 1 - self.ssr/self.centered_tss\n",
-            "/usr/local/lib/python3.10/dist-packages/statsmodels/regression/linear_model.py:1782: RuntimeWarning: invalid value encountered in scalar divide\n",
+            "/usr/local/lib/python3.11/dist-packages/statsmodels/regression/linear_model.py:1782: RuntimeWarning: invalid value encountered in scalar divide\n",
             "  return 1 - self.ssr/self.centered_tss\n"
           ]
         }
@@ -2032,85 +2044,34 @@
     {
       "cell_type": "code",
       "source": [
+        "'''\n",
         "!pip uninstall numpy scikit-learn -y\n",
         "!pip uninstall numpy scikit-learn -y\n",
-        "!pip install --upgrade --force-reinstall numpy \"scikit-learn<1.6.0\""
+        "!pip install --upgrade --force-reinstall numpy \"scikit-learn<1.6.0\"\n",
+        "'''"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 912
+          "height": 36
         },
         "id": "jQ1lvahnUlC_",
-        "outputId": "c9b950e3-fb30-4fc3-8f00-5e678bcec8e7"
+        "outputId": "71e37719-d8c5-48a0-baa8-40db86ae3c28"
       },
-      "execution_count": 10,
+      "execution_count": 41,
       "outputs": [
         {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Found existing installation: numpy 2.2.1\n",
-            "Uninstalling numpy-2.2.1:\n",
-            "  Successfully uninstalled numpy-2.2.1\n",
-            "Found existing installation: scikit-learn 1.5.2\n",
-            "Uninstalling scikit-learn-1.5.2:\n",
-            "  Successfully uninstalled scikit-learn-1.5.2\n",
-            "\u001b[33mWARNING: Skipping numpy as it is not installed.\u001b[0m\u001b[33m\n",
-            "\u001b[0m\u001b[33mWARNING: Skipping scikit-learn as it is not installed.\u001b[0m\u001b[33m\n",
-            "\u001b[0mCollecting numpy\n",
-            "  Using cached numpy-2.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)\n",
-            "Collecting scikit-learn<1.6.0\n",
-            "  Using cached scikit_learn-1.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)\n",
-            "Collecting scipy>=1.6.0 (from scikit-learn<1.6.0)\n",
-            "  Using cached scipy-1.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)\n",
-            "Collecting joblib>=1.2.0 (from scikit-learn<1.6.0)\n",
-            "  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)\n",
-            "Collecting threadpoolctl>=3.1.0 (from scikit-learn<1.6.0)\n",
-            "  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)\n",
-            "Using cached numpy-2.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)\n",
-            "Using cached scikit_learn-1.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.3 MB)\n",
-            "Using cached joblib-1.4.2-py3-none-any.whl (301 kB)\n",
-            "Using cached scipy-1.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.6 MB)\n",
-            "Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)\n",
-            "Installing collected packages: threadpoolctl, numpy, joblib, scipy, scikit-learn\n",
-            "  Attempting uninstall: threadpoolctl\n",
-            "    Found existing installation: threadpoolctl 3.5.0\n",
-            "    Uninstalling threadpoolctl-3.5.0:\n",
-            "      Successfully uninstalled threadpoolctl-3.5.0\n",
-            "  Attempting uninstall: joblib\n",
-            "    Found existing installation: joblib 1.4.2\n",
-            "    Uninstalling joblib-1.4.2:\n",
-            "      Successfully uninstalled joblib-1.4.2\n",
-            "  Attempting uninstall: scipy\n",
-            "    Found existing installation: scipy 1.15.0\n",
-            "    Uninstalling scipy-1.15.0:\n",
-            "      Successfully uninstalled scipy-1.15.0\n",
-            "\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n",
-            "cupy-cuda12x 12.2.0 requires numpy<1.27,>=1.20, but you have numpy 2.2.1 which is incompatible.\n",
-            "gensim 4.3.3 requires numpy<2.0,>=1.18.5, but you have numpy 2.2.1 which is incompatible.\n",
-            "gensim 4.3.3 requires scipy<1.14.0,>=1.7.0, but you have scipy 1.15.0 which is incompatible.\n",
-            "langchain 0.3.14 requires numpy<2,>=1.22.4; python_version < \"3.12\", but you have numpy 2.2.1 which is incompatible.\n",
-            "numba 0.60.0 requires numpy<2.1,>=1.22, but you have numpy 2.2.1 which is incompatible.\n",
-            "pytensor 2.26.4 requires numpy<2,>=1.17.0, but you have numpy 2.2.1 which is incompatible.\n",
-            "tensorflow 2.17.1 requires numpy<2.0.0,>=1.23.5; python_version <= \"3.11\", but you have numpy 2.2.1 which is incompatible.\n",
-            "thinc 8.2.5 requires numpy<2.0.0,>=1.19.0; python_version >= \"3.9\", but you have numpy 2.2.1 which is incompatible.\u001b[0m\u001b[31m\n",
-            "\u001b[0mSuccessfully installed joblib-1.4.2 numpy-2.2.1 scikit-learn-1.5.2 scipy-1.15.0 threadpoolctl-3.5.0\n"
-          ]
-        },
-        {
-          "output_type": "display_data",
+          "output_type": "execute_result",
           "data": {
-            "application/vnd.colab-display-data+json": {
-              "pip_warning": {
-                "packages": [
-                  "joblib"
-                ]
-              },
-              "id": "612ae7e2704e49188751529cde029d58"
+            "text/plain": [
+              "'\\n!pip uninstall numpy scikit-learn -y\\n!pip uninstall numpy scikit-learn -y\\n!pip install --upgrade --force-reinstall numpy \"scikit-learn<1.6.0\"\\n'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
             }
           },
-          "metadata": {}
+          "metadata": {},
+          "execution_count": 41
         }
       ]
     },
@@ -2118,7 +2079,7 @@
       "cell_type": "code",
       "source": [
         "from sklearn.model_selection import train_test_split\n",
-        "\n",
+        "import numpy as np\n",
         "'''\n",
         "Retian only Support_Total_Monthly_Listeners\n",
         "monthly_listeners = headliner_monthly_listeners + Support_Total_Monthly_Listeners\n",
@@ -2126,12 +2087,13 @@
         "'''\n",
         "\n",
         "X = data.drop(columns=['Avg. Gross USD'])\n",
-        "y = data['Avg. Gross USD']"
+        "y = data['Avg. Gross USD']\n",
+        "y = np.log1p(y)"
       ],
       "metadata": {
         "id": "7JTi_Ps1AID7"
       },
-      "execution_count": 20,
+      "execution_count": 42,
       "outputs": []
     },
     {
@@ -2145,9 +2107,9 @@
           "base_uri": "https://localhost:8080/",
           "height": 458
         },
-        "outputId": "7e71d591-1f4f-49b0-981b-d3d9a4d1e500"
+        "outputId": "a9283802-4a57-414d-cc39-d29262726fdd"
       },
-      "execution_count": 12,
+      "execution_count": 43,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2240,7 +2202,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 12
+          "execution_count": 43
         }
       ]
     },
@@ -2259,16 +2221,16 @@
       "metadata": {
         "id": "4Y5r6spPTiwv"
       },
-      "execution_count": 12,
+      "execution_count": 43,
       "outputs": []
     },
     {
       "cell_type": "code",
       "source": [
-        "from lightgbm import LGBMRegressor\n",
-        "from sklearn.model_selection import cross_val_score\n",
-        "from sklearn.metrics import make_scorer, mean_squared_error, r2_score, mean_absolute_error\n",
+        "from sklearn.model_selection import KFold\n",
+        "from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score\n",
         "import numpy as np\n",
+        "from lightgbm import LGBMRegressor\n",
         "\n",
         "# Initialize the LightGBM model\n",
         "model = LGBMRegressor(\n",
@@ -2276,72 +2238,76 @@
         "    max_depth=3,\n",
         "    learning_rate=0.1,\n",
         "    n_estimators=300,\n",
-        "    random_state=42,\n",
-        "    verbose=-1\n",
+        "    random_state=42\n",
         ")\n",
         "\n",
-        "# Define scoring metrics\n",
-        "mse_scorer = make_scorer(mean_squared_error, greater_is_better=False)\n",
-        "r2_scorer = make_scorer(r2_score)\n",
-        "mae_scorer = make_scorer(mean_absolute_error, greater_is_better=False)\n",
+        "# KFold cross-validation\n",
+        "kf = KFold(n_splits=5, shuffle=True, random_state=42)\n",
         "\n",
-        "# Perform 5-fold cross-validation for MSE and compute RMSE\n",
-        "mse_scores = cross_val_score(model, X, y, cv=5, scoring=mse_scorer)\n",
-        "rmse_scores = np.sqrt(-mse_scores)\n",
+        "# Lists to store scores for each fold\n",
+        "rmse_scores = []\n",
+        "mae_scores = []\n",
+        "r2_scores = []\n",
         "\n",
-        "# Perform 5-fold cross-validation for R2 score\n",
-        "r2_scores = cross_val_score(model, X, y, cv=5, scoring=r2_scorer)\n",
+        "# Perform cross-validation\n",
+        "for train_index, test_index in kf.split(X):\n",
+        "    # Split the data\n",
+        "    X_train, X_test = X.iloc[train_index], X.iloc[test_index]\n",
+        "    y_train, y_test = y.iloc[train_index], y.iloc[test_index]  # y is already log-transformed\n",
         "\n",
-        "# Perform 5-fold cross-validation for MAE\n",
-        "mae_scores = -cross_val_score(model, X, y, cv=5, scoring=mae_scorer)\n",
+        "    # Train the model\n",
+        "    model.fit(X_train, y_train)\n",
+        "\n",
+        "    # Predict in the transformed space\n",
+        "    y_pred_transformed = model.predict(X_test)\n",
+        "\n",
+        "    # Reverse-transform the predictions and the test data\n",
+        "    y_pred_original = np.expm1(y_pred_transformed)\n",
+        "    y_test_original = np.expm1(y_test)\n",
+        "\n",
+        "    # Calculate metrics in the original scale\n",
+        "    rmse_scores.append(np.sqrt(mean_squared_error(y_test_original, y_pred_original)))\n",
+        "    mae_scores.append(mean_absolute_error(y_test_original, y_pred_original))\n",
+        "    r2_scores.append(r2_score(y_test_original, y_pred_original))\n",
+        "\n",
+        "# Calculate average metrics\n",
+        "avg_rmse = np.mean(rmse_scores)\n",
+        "avg_mae = np.mean(mae_scores)\n",
+        "avg_r2 = np.mean(r2_scores)\n",
         "\n",
         "# Print results\n",
-        "print(\"5-Fold Cross-Validation Results:\")\n",
-        "print(\"\\nRMSE scores for each fold:\", rmse_scores)\n",
-        "print(\"Average RMSE:\", np.mean(rmse_scores))\n",
-        "print(\"\\nR-squared scores for each fold:\", r2_scores)\n",
-        "print(\"Average R-squared (R2) Score:\", np.mean(r2_scores))\n",
-        "print(\"\\nMAE scores for each fold:\", mae_scores)\n",
-        "print(\"Average MAE:\", np.mean(mae_scores))"
+        "print(\"Custom Cross-Validation Results (Original Scale):\")\n",
+        "print(f\"RMSE scores for each fold: {rmse_scores}\")\n",
+        "print(f\"Average RMSE: {avg_rmse:.4f}\\n\")\n",
+        "\n",
+        "print(f\"MAE scores for each fold: {mae_scores}\")\n",
+        "print(f\"Average MAE: {avg_mae:.4f}\\n\")\n",
+        "\n",
+        "print(f\"R² scores for each fold: {r2_scores}\")\n",
+        "print(f\"Average R²: {avg_r2:.4f}\")"
       ],
       "metadata": {
         "id": "S_na-uJsDWE8",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "8124ded1-564b-443d-d833-245246b0845a"
+        "outputId": "5df0a503-2fad-4751-aa85-85bd6c322fef"
       },
-      "execution_count": 13,
+      "execution_count": 55,
       "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stderr",
-          "text": [
-            "/usr/local/lib/python3.10/dist-packages/dask/dataframe/__init__.py:42: FutureWarning: \n",
-            "Dask dataframe query planning is disabled because dask-expr is not installed.\n",
-            "\n",
-            "You can install it with `pip install dask[dataframe]` or `conda install dask`.\n",
-            "This will raise in a future version.\n",
-            "\n",
-            "  warnings.warn(msg, FutureWarning)\n"
-          ]
-        },
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "5-Fold Cross-Validation Results:\n",
+            "Custom Cross-Validation Results (Original Scale):\n",
+            "RMSE scores for each fold: [np.float64(172448.69382645588), np.float64(216767.33402492775), np.float64(186119.3193200656), np.float64(146846.6284787571), np.float64(313386.60941914085)]\n",
+            "Average RMSE: 207113.7170\n",
             "\n",
-            "RMSE scores for each fold: [327975.40485302 302083.17169055 178661.48404617 175603.01896207\n",
-            " 260050.25466449]\n",
-            "Average RMSE: 248874.66684325956\n",
+            "MAE scores for each fold: [np.float64(67064.33351435284), np.float64(70265.97265070304), np.float64(66898.50862359509), np.float64(56373.14788409295), np.float64(75893.40943988324)]\n",
+            "Average MAE: 67299.0744\n",
             "\n",
-            "R-squared scores for each fold: [0.84766545 0.80614638 0.90035135 0.88968642 0.58621649]\n",
-            "Average R-squared (R2) Score: 0.8060132180841709\n",
-            "\n",
-            "MAE scores for each fold: [117079.59318298 125342.65475321  68647.08486574  70910.20325164\n",
-            "  87904.10768005]\n",
-            "Average MAE: 93976.72874672382\n"
+            "R² scores for each fold: [0.9171390298628168, 0.8938956866065088, 0.9028143419875341, 0.9271128657140643, 0.8160128536346675]\n",
+            "Average R²: 0.8914\n"
           ]
         }
       ]
@@ -2361,7 +2327,7 @@
       "metadata": {
         "id": "NEcP6WbvD2pq"
       },
-      "execution_count": 13,
+      "execution_count": 44,
       "outputs": []
     },
     {
@@ -2380,7 +2346,7 @@
         "    n_estimators=300,\n",
         "    random_state=42,\n",
         "    tree_method='hist',\n",
-        "    enable_categorical = True\n",
+        "    enable_categorical=True\n",
         ")\n",
         "\n",
         "# KFold cross-validation\n",
@@ -2393,20 +2359,24 @@
         "\n",
         "# Perform cross-validation\n",
         "for train_index, test_index in kf.split(X):\n",
-        "    # Split the data using `.iloc`\n",
+        "    # Split the data\n",
         "    X_train, X_test = X.iloc[train_index], X.iloc[test_index]\n",
-        "    y_train, y_test = y.iloc[train_index], y.iloc[test_index]\n",
+        "    y_train, y_test = y.iloc[train_index], y.iloc[test_index]  # y is already log-transformed\n",
         "\n",
         "    # Train the model\n",
         "    model.fit(X_train, y_train)\n",
         "\n",
-        "    # Predict on the test set\n",
-        "    y_pred = model.predict(X_test)\n",
+        "    # Predict in the transformed space\n",
+        "    y_pred_transformed = model.predict(X_test)\n",
         "\n",
-        "    # Calculate metrics\n",
-        "    rmse_scores.append(np.sqrt(mean_squared_error(y_test, y_pred)))\n",
-        "    mae_scores.append(mean_absolute_error(y_test, y_pred))\n",
-        "    r2_scores.append(r2_score(y_test, y_pred))\n",
+        "    # Reverse-transform the predictions and the test data\n",
+        "    y_pred_original = np.expm1(y_pred_transformed)\n",
+        "    y_test_original = np.expm1(y_test)\n",
+        "\n",
+        "    # Calculate metrics in the original scale\n",
+        "    rmse_scores.append(np.sqrt(mean_squared_error(y_test_original, y_pred_original)))\n",
+        "    mae_scores.append(mean_absolute_error(y_test_original, y_pred_original))\n",
+        "    r2_scores.append(r2_score(y_test_original, y_pred_original))\n",
         "\n",
         "# Calculate average metrics\n",
         "avg_rmse = np.mean(rmse_scores)\n",
@@ -2414,7 +2384,7 @@
         "avg_r2 = np.mean(r2_scores)\n",
         "\n",
         "# Print results\n",
-        "print(\"Custom Cross-Validation Results:\")\n",
+        "print(\"Custom Cross-Validation Results (Original Scale):\")\n",
         "print(f\"RMSE scores for each fold: {rmse_scores}\")\n",
         "print(f\"Average RMSE: {avg_rmse:.4f}\\n\")\n",
         "\n",
@@ -2429,23 +2399,23 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "8efcda73-b689-4c9f-b732-fab5e9dac6c5"
+        "outputId": "c41bfc40-bfa6-473b-d9f6-3255d71d373a"
       },
-      "execution_count": 14,
+      "execution_count": 54,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Custom Cross-Validation Results:\n",
-            "RMSE scores for each fold: [np.float64(172532.96423047545), np.float64(285024.81786369736), np.float64(197909.54640157975), np.float64(182777.30588957522), np.float64(340517.2421617899)]\n",
-            "Average RMSE: 235752.3753\n",
+            "Custom Cross-Validation Results (Original Scale):\n",
+            "RMSE scores for each fold: [np.float64(186624.10960466953), np.float64(206632.26059987923), np.float64(159883.66660054674), np.float64(132585.23266478913), np.float64(284454.96007948526)]\n",
+            "Average RMSE: 194036.0459\n",
             "\n",
-            "MAE scores for each fold: [np.float64(78454.76960231877), np.float64(96274.26697624342), np.float64(82840.57353116944), np.float64(74930.32372519902), np.float64(97002.0663595472)]\n",
-            "Average MAE: 85900.4000\n",
+            "MAE scores for each fold: [np.float64(70378.83542484099), np.float64(70502.39133673895), np.float64(62276.949288142976), np.float64(56370.64303136007), np.float64(70718.79217075896)]\n",
+            "Average MAE: 66049.5223\n",
             "\n",
-            "R² scores for each fold: [0.9170580268305684, 0.8165529550548626, 0.8901113709566693, 0.8870808867609011, 0.7827774903643676]\n",
-            "Average R²: 0.8587\n"
+            "R² scores for each fold: [0.9029566695850672, 0.9035856626624292, 0.9282821160617513, 0.9405826571943067, 0.8484159053695242]\n",
+            "Average R²: 0.9048\n"
           ]
         }
       ]
@@ -2468,6 +2438,7 @@
         "data = data.drop(columns = [\"Genre\", \"State\", \"City\"])\n",
         "X = data.drop(columns=['Avg. Gross USD'])\n",
         "y = data['Avg. Gross USD']\n",
+        "y = np.log1p(y)\n",
         "\n",
         "'''\n",
         "# Compute VIF\n",
@@ -2486,11 +2457,11 @@
         "id": "IdTnFnKSEZ28",
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 70
+          "height": 88
         },
-        "outputId": "6b427265-afd9-401f-c8bd-2a604d14dbba"
+        "outputId": "74942bb3-92ee-451b-e5f5-c7dd3b5e4f53"
       },
-      "execution_count": 15,
+      "execution_count": 46,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2503,7 +2474,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 15
+          "execution_count": 46
         }
       ]
     },
@@ -2556,9 +2527,9 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "1e4be661-7344-4370-99fe-b6fb55ddef88"
+        "outputId": "265d15b2-7580-44b4-9b30-a914cdd44a0f"
       },
-      "execution_count": 16,
+      "execution_count": 47,
       "outputs": [
         {
           "output_type": "stream",
@@ -2566,16 +2537,14 @@
           "text": [
             "5-Fold Cross-Validation Results:\n",
             "\n",
-            "RMSE scores for each fold: [427145.68291601 397195.23874845 270674.21723539 437450.21125557\n",
-            " 291131.50191014]\n",
-            "Average RMSE: 364719.37041311257\n",
+            "RMSE scores for each fold: [0.88864783 0.86262106 0.78206264 1.23310853 0.93898126]\n",
+            "Average RMSE: 0.9410842642736373\n",
             "\n",
-            "R-squared scores for each fold: [0.74161463 0.66485796 0.77128043 0.31542304 0.48139463]\n",
-            "Average R-squared (R2) Score: 0.5949141372186977\n",
+            "R-squared scores for each fold: [0.82900535 0.8288632  0.85653344 0.63647712 0.78859432]\n",
+            "Average R-squared (R2) Score: 0.7878946845272764\n",
             "\n",
-            "MAE scores for each fold: [194520.54825845 237942.31375051 144818.42924624 179952.74925716\n",
-            " 173826.89496785]\n",
-            "Average MAE: 186212.18709604265\n"
+            "MAE scores for each fold: [0.64634328 0.63867816 0.59635781 0.68360131 0.71934281]\n",
+            "Average MAE: 0.6568646734379334\n"
           ]
         }
       ]
@@ -2634,11 +2603,11 @@
         "id": "E9rgZ6bDF8OF",
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 105
+          "height": 140
         },
-        "outputId": "b524048a-69ee-4eed-ebfa-9b1819fc10b1"
+        "outputId": "384263e7-bd28-4404-8303-2577e4998997"
       },
-      "execution_count": 17,
+      "execution_count": 48,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2651,14 +2620,14 @@
             }
           },
           "metadata": {},
-          "execution_count": 17
+          "execution_count": 48
         }
       ]
     },
     {
       "cell_type": "markdown",
       "source": [
-        "## (Best) Averaging Ensemble with Cross-Validation (lightGBM + RF):"
+        "## (Best) Averaging Ensemble with Cross-Validation (lightGBM + XGBoost):"
       ],
       "metadata": {
         "id": "BV3-ymH8K99Q"
@@ -2670,7 +2639,7 @@
       "metadata": {
         "id": "dhib1Cjned-Q"
       },
-      "execution_count": 17,
+      "execution_count": 48,
       "outputs": []
     },
     {
@@ -2679,8 +2648,8 @@
         "from sklearn.ensemble import VotingRegressor\n",
         "from lightgbm import LGBMRegressor\n",
         "from xgboost import XGBRegressor\n",
-        "from sklearn.model_selection import cross_val_score, KFold\n",
-        "from sklearn.metrics import make_scorer, mean_squared_error, r2_score, mean_absolute_error\n",
+        "from sklearn.model_selection import KFold\n",
+        "from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error\n",
         "import numpy as np\n",
         "\n",
         "# Initialize models\n",
@@ -2700,20 +2669,28 @@
         "\n",
         "# Perform cross-validation\n",
         "for train_index, test_index in kf.split(X):\n",
-        "    # Split the data using `.iloc`\n",
+        "    # Split the data\n",
         "    X_train, X_test = X.iloc[train_index], X.iloc[test_index]\n",
-        "    y_train, y_test = y.iloc[train_index], y.iloc[test_index]\n",
+        "    y_train, y_test = y.iloc[train_index], y.iloc[test_index]  # Already log-transformed\n",
         "\n",
-        "    # Train the model\n",
+        "    # Train the model on the log-transformed target\n",
         "    voting_ensemble.fit(X_train, y_train)\n",
         "\n",
-        "    # Predict on the test set\n",
-        "    y_pred = voting_ensemble.predict(X_test)\n",
+        "    # Predict in the transformed space\n",
+        "    y_pred_transformed = voting_ensemble.predict(X_test)\n",
         "\n",
-        "    # Calculate metrics\n",
-        "    rmse_scores.append(np.sqrt(mean_squared_error(y_test, y_pred)))\n",
-        "    mae_scores.append(mean_absolute_error(y_test, y_pred))\n",
-        "    r2_scores.append(r2_score(y_test, y_pred))\n",
+        "    # Reverse-transform the predictions to the original scale\n",
+        "    y_pred_original = np.expm1(y_pred_transformed)\n",
+        "    y_test_original = np.expm1(y_test)\n",
+        "\n",
+        "    # Calculate metrics on the original scale\n",
+        "    rmse_scores.append(np.sqrt(mean_squared_error(y_test_original, y_pred_original)))\n",
+        "    mae_scores.append(mean_absolute_error(y_test_original, y_pred_original))\n",
+        "    r2_scores.append(r2_score(y_test_original, y_pred_original))\n",
+        "\n",
+        "# Convert scores to NumPy arrays\n",
+        "rmse_scores = np.array(rmse_scores)\n",
+        "mae_scores = np.array(mae_scores)\n",
         "\n",
         "# Calculate average metrics\n",
         "avg_rmse = np.mean(rmse_scores)\n",
@@ -2729,30 +2706,32 @@
         "print(f\"Average MAE: {avg_mae:.4f}\\n\")\n",
         "\n",
         "print(f\"R² scores for each fold: {r2_scores}\")\n",
-        "print(f\"Average R²: {avg_r2:.4f}\")\n"
+        "print(f\"Average R²: {avg_r2:.4f}\")"
       ],
       "metadata": {
         "id": "SWFTUnW1KOwp",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "2f9f9773-2b63-49d1-83d5-4e03676d260f"
+        "outputId": "e41a89be-1d6a-4fd7-9edc-5b5eb8385463"
       },
-      "execution_count": 18,
+      "execution_count": 53,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
             "Custom Cross-Validation Results:\n",
-            "RMSE scores for each fold: [np.float64(169128.55635012785), np.float64(192162.62388384205), np.float64(153728.31430823056), np.float64(132292.9300818177), np.float64(284775.4661364876)]\n",
-            "Average RMSE: 186417.5782\n",
+            "RMSE scores for each fold: [178473.10452261 181246.57635881 152667.11886389 130114.46914378\n",
+            " 278204.77624818]\n",
+            "Average RMSE: 184141.2090\n",
             "\n",
-            "MAE scores for each fold: [np.float64(64737.80359528492), np.float64(66574.39942284006), np.float64(63479.43094730986), np.float64(55484.38289999354), np.float64(71119.54526230274)]\n",
-            "Average MAE: 64279.1124\n",
+            "MAE scores for each fold: [63348.62169236 64999.37271438 59406.68201391 52124.17791856\n",
+            " 69698.60054913]\n",
+            "Average MAE: 61915.4910\n",
             "\n",
-            "R² scores for each fold: [0.920298943404221, 0.9166159074066171, 0.9336979436249114, 0.9408443559900838, 0.8480741219746901]\n",
-            "Average R²: 0.9119\n"
+            "R² scores for each fold: [0.911248489822061, 0.9258203140788652, 0.9346101580448647, 0.9427765412720632, 0.8550040821115897]\n",
+            "Average R²: 0.9139\n"
           ]
         }
       ]
@@ -2810,9 +2789,9 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "72994e11-b7db-4623-9031-d1f3a4c7d32f"
+        "outputId": "740597a4-c34f-4794-bfaf-2e4bad76f20f"
       },
-      "execution_count": 19,
+      "execution_count": 50,
       "outputs": [
         {
           "output_type": "stream",
@@ -2820,16 +2799,14 @@
           "text": [
             "5-Fold Cross-Validation Results:\n",
             "\n",
-            "RMSE scores for each fold: [931164.75297828 766392.92182379 603172.37724921 558525.72480558\n",
-            " 423399.65290648]\n",
-            "Average RMSE: 656531.085952669\n",
+            "RMSE scores for each fold: [1.5312429  1.44843954 1.34317636 1.47764362 1.64196869]\n",
+            "Average RMSE: 1.4884942202945741\n",
             "\n",
-            "R-squared scores for each fold: [-0.22791677 -0.24773918 -0.13577535 -0.11596707 -0.09688124]\n",
-            "Average R-squared (R2) Score: -0.1648559194708828\n",
+            "R-squared scores for each fold: [0.49229512 0.51749254 0.57681167 0.47800234 0.35355355]\n",
+            "Average R-squared (R2) Score: 0.4836310463042084\n",
             "\n",
-            "MAE scores for each fold: [428066.68112314 363288.24978062 248949.12367148 220996.54789873\n",
-            " 182340.49755295]\n",
-            "Average MAE: 288728.2200053832\n"
+            "MAE scores for each fold: [1.20626784 1.12259911 1.09108478 1.15757837 1.30876208]\n",
+            "Average MAE: 1.1772584354790052\n"
           ]
         }
       ]
@@ -2840,7 +2817,7 @@
       "metadata": {
         "id": "Zw8KTa-6AlIj"
       },
-      "execution_count": 19,
+      "execution_count": 50,
       "outputs": []
     }
   ]
